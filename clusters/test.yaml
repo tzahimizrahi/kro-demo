@@ -1,9 +1,9 @@
 apiVersion: kro.run/v1alpha1
 kind: EksCluster
 metadata:
-  name: workload7
+  name: workload8
 spec:
-    name: workload7
+    name: workload8
     region: us-west-2
     k8sVersion: '1.30'
     accountId: '881490129878'

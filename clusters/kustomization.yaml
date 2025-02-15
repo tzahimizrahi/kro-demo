@@ -6,3 +6,4 @@ resources:
 - rg/eks-w-vpc.yaml
 - workload1.yaml
 - workload2.yaml
+- test.yaml

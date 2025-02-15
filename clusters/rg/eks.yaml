@@ -28,7 +28,7 @@ spec:
       apiVersion: iam.services.k8s.aws/v1alpha1
       kind: Role
       metadata:
-        namespace: ${schema.spec.name}
+        namespace: default
         name: ${schema.spec.name}-cluster-role
       spec:
         name: ${schema.spec.name}-cluster-role
@@ -52,7 +52,7 @@ spec:
       apiVersion: iam.services.k8s.aws/v1alpha1
       kind: Role
       metadata:
-        namespace: ${schema.spec.name}
+        namespace: default
         name: ${schema.spec.name}-cluster-node-role
       spec:
         name: ${schema.spec.name}-cluster-node-role
@@ -78,7 +78,7 @@ spec:
       apiVersion: eks.services.k8s.aws/v1alpha1
       kind: Cluster
       metadata:
-        namespace: ${schema.spec.name}
+        namespace: default
         name: ${schema.spec.name}
       spec:
         name: ${schema.spec.name}
@@ -97,7 +97,7 @@ spec:
       apiVersion: eks.services.k8s.aws/v1alpha1
       kind: Nodegroup
       metadata:
-        namespace: ${schema.spec.name}
+        namespace: default
         name: ${schema.spec.name}-nodegroup
       spec:
         name: ${schema.spec.name}-nodegroup
@@ -169,7 +169,7 @@ spec:
       apiVersion: eks.services.k8s.aws/v1alpha1
       kind: AccessEntry
       metadata:
-        namespace: ${schema.spec.name}
+        namespace: default
         name: ${schema.spec.name}-accessentry
       spec:
         clusterName: ${schema.spec.name}
@@ -183,7 +183,7 @@ spec:
       apiVersion: iam.services.k8s.aws/v1alpha1
       kind: OpenIDConnectProvider
       metadata:
-        namespace: ${schema.spec.name}
+        namespace: default
         name: ${schema.spec.name}-odic
       spec:
         url: ${ekscluster.status.identity.oidc.issuer}

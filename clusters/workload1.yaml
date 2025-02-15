@@ -6,7 +6,7 @@ spec:
     name: workload1
     region: us-west-2
     k8sVersion: '1.30'
-    accountId: '111222333444'
+    accountId: '881490129878'
     nodesCount: 3
     cidr:
       vpcCidr: "10.0.0.0/16"

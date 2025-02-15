@@ -1,0 +1,18 @@
+apiVersion: kro.run/v1alpha1
+kind: EksCluster
+metadata:
+  name: workload5
+spec:
+    name: workload5
+    region: us-west-2
+    k8sVersion: '1.30'
+    accountId: '881490129878'
+    nodesCount: 3
+    subnets:
+      controlplane:
+        subnet1ID: "subnet-057fdaaef338e05e3"
+        subnet2ID: "subnet-06b974f97a5147b41"
+      workers:  
+        subnet1ID: "subnet-057fdaaef338e05e3"
+        subnet2ID: "subnet-06b974f97a5147b41"
+   

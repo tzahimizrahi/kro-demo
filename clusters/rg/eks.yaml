@@ -157,7 +157,7 @@ spec:
           {
             "awsAuthConfig": {
               "clusterName": "${schema.spec.name}",
-              "roleARN": "${argocdRole.status.ackResourceMetadata.arn}"
+              "roleARN": "arn:aws:iam::881490129878:role/argocd-hub-role"
             },
             "tlsClientConfig": {
               "insecure": false,
@@ -177,7 +177,7 @@ spec:
         - accessScope:
             type: "cluster"
           policyARN: "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
-        principalARN: "${argocdRole.status.ackResourceMetadata.arn}"
+        principalARN: "arn:aws:iam::881490129878:role/argocd-hub-role"
   - id: oidcProvider
     template:
       apiVersion: iam.services.k8s.aws/v1alpha1
